@@ -1,0 +1,245 @@
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6fa;
+  color: #111827;
+}
+
+/* =========================
+   DASHBOARD WRAPPER
+========================= */
+.dashboard {
+  padding: 20px;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.topbar {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.topbar p {
+  margin-top: 5px;
+  color: #6b7280;
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+.search-panel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* SEARCH BOX */
+.search-box {
+  position: relative;
+  width: 420px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  outline: none;
+  background: white;
+  transition: 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  padding: 14px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+.dropdown {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  margin-top: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* ITEM */
+.dropdown-item {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  transition: 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item span {
+  font-weight: 500;
+}
+
+.dropdown-item small {
+  color: #6b7280;
+}
+
+/* =========================
+   STATUS
+========================= */
+.loading {
+  text-align: center;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.error {
+  text-align: center;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+}
+
+/* =========================
+   CARD GRID
+========================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-header span {
+  font-size: 12px;
+  background: #eef2ff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #1e3a8a;
+}
+
+/* =========================
+   DESIGNATION
+========================= */
+.card p {
+  margin: 10px 0;
+  color: #4b5563;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  background: #f3f4f6;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.active,
+.status.present {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.resigned {
+  background: #fee2e2;
+  color: #991b1b;
+}

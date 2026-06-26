@@ -1,0 +1,235 @@
+.dashboard {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.topbar {
+  background: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .topbar {
+  background: #1e2937;
+}
+
+.search-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+.dark .search-box input {
+  background: #1e2937;
+  border-color: #334155;
+  color: white;
+}
+
+.search-btn {
+  padding: 0 28px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dark .profile-card {
+  background: #1e2937;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.din-badge {
+  background: #eff6ff;
+  color: #1e40af;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.dark .din-badge {
+  background: #1e3a8a;
+  color: #bfdbfe;
+}
+
+.designation {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.dark .designation {
+  color: #94a3b8;
+}
+
+.career-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.career-table th {
+  background: #f1f5f9;
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+}
+
+.dark .career-table th {
+  background: #334155;
+}
+
+.career-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dark .career-table td {
+  border-bottom: 1px solid #334155;
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status-badge.active,
+.status-badge.present {
+  background: #10b981;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 150px;
+}
+
+.card {
+  width: 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.personal {
+  background: #4a79d8;
+}
+
+.career {
+  background: #4a79d8;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.personal-grid p {
+  background: #f2f2f2;
+  padding: 8px;
+  border-radius: 5px;
+}
