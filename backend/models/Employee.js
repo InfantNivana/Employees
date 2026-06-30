@@ -27,6 +27,7 @@ const employeeSchema = new mongoose.Schema({
   address: String,
   nationality: String,
   currentDesignation: String,
+  qualification: String,
 
   companyDetails: companySchema,
   careerHistory: [careerSchema],

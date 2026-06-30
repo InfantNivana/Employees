@@ -5,125 +5,189 @@ function Home() {
 
   return (
     <div style={{ 
-      fontFamily: "sans-serif", 
+      fontFamily: "Inter, system-ui, -apple-system, sans-serif", 
       background: "#f8fafc", 
       minHeight: "calc(100vh - 70px)", 
-      paddingBottom: "60px" 
+      paddingBottom: "80px",
+      color: "#1e293b"
     }}>
-      {/* HERO HERO BANNER SECTION */}
+      {/* HERO BANNER SECTION WITH BACKGROUND IMAGE */}
       <div style={{
-        background: "linear-gradient(135deg, #0b1528 0%, #1e1b4b 100%)",
+        position: "relative",
+        backgroundImage: `linear-gradient(to right, rgba(15, 23, 42, 0.95) 30%, rgba(30, 41, 59, 0.8) 70%, rgba(255, 255, 255, 0.1) 100%), url('image_11a2bb.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center right",
         color: "#ffffff",
-        padding: "80px 24px",
-        textAlign: "center",
-        boxShadow: "inset 0 -4px 12px rgba(0,0,0,0.1)"
+        padding: "120px 24px",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.08)"
       }}>
-        <h1 style={{ 
-          fontSize: "3rem", 
-          margin: "0 0 16px 0", 
-          fontWeight: "800",
-          letterSpacing: "-0.5px"
-        }}>
-          Corporate Profile & Information Portal
-        </h1>
-        <p style={{ 
-          fontSize: "1.25rem", 
-          color: "#94a3b8", 
-          maxWidth: "700px", 
+        <div style={{
+          maxWidth: "1100px",
           margin: "0 auto",
-          lineHeight: "1.6"
+          textAlign: "left"
         }}>
-          Instantly verify registration information, explore corporate metadata structures, track active current directors, and map cross-organizational employment history paths.
-        </p>
+          <span style={{
+            textTransform: "uppercase",
+            letterSpacing: "1.5px",
+            fontSize: "0.85rem",
+            fontWeight: "700",
+            color: "#38bdf8",
+            display: "inline-block",
+            marginBottom: "12px"
+          }}>
+            Enterprise Intelligence Platform
+          </span>
+          <h1 style={{ 
+            fontSize: "3.5rem", 
+            margin: "0 0 20px 0", 
+            fontWeight: "800",
+            lineHeight: "1.15",
+            letterSpacing: "-0.025em",
+            maxWidth: "750px"
+          }}>
+            Corporate Profile & <br />
+            <span style={{ color: "#38bdf8" }}>Information Portal</span>
+          </h1>
+          <p style={{ 
+            fontSize: "1.2rem", 
+            color: "#cbd5e1", 
+            maxWidth: "640px", 
+            margin: "0",
+            lineHeight: "1.7",
+            fontWeight: "400"
+          }}>
+            Instantly verify registration information, explore corporate metadata structures, track active current directors, and map cross-organizational employment history paths.
+          </p>
+        </div>
       </div>
 
       {/* CORE FUNCTIONALITY SELECTION TILES */}
       <div style={{
         maxWidth: "1100px",
-        margin: "-40px auto 0 auto",
+        margin: "-50px auto 0 auto",
         padding: "0 24px",
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-        gap: "32px"
+        gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+        gap: "32px",
+        position: "relative",
+        zIndex: "10"
       }}>
         
         {/* Company Card Component Option */}
         <div style={{
           background: "#ffffff",
-          borderRadius: "16px",
-          padding: "32px",
-          boxShadow: "0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.05)",
-          border: "1px solid #e2e8f0",
+          borderRadius: "20px",
+          padding: "40px",
+          boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02)",
+          border: "1px solid rgba(226, 232, 240, 0.8)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          transition: "transform 0.2s ease"
+          transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
         }}>
           <div>
-            <div style={{ fontSize: "3rem", marginBottom: "16px" }}>🏢</div>
-            <h2 style={{ color: "#0f172a", margin: "0 0 12px 0", fontSize: "1.5rem", fontWeight: "700" }}>
+            <div style={{ 
+              background: "#eff6ff", 
+              width: "60px", 
+              height: "60px", 
+              borderRadius: "14px", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center",
+              fontSize: "1.75rem", 
+              marginBottom: "24px" 
+            }}>
+              🏢
+            </div>
+            <h2 style={{ color: "#0f172a", margin: "0 0 12px 0", fontSize: "1.5rem", fontWeight: "700", letterSpacing: "-0.01em" }}>
               Company Registry Search
             </h2>
-            <p style={{ color: "#475569", fontSize: "1.05rem", lineHeight: "1.5", margin: "0 0 24px 0" }}>
-              Look up corporate files by name or unique Identification Numbers (**CIN**). View structural profiles, industries, descriptions, and current leadership matrices.
+            <p style={{ color: "#64748b", fontSize: "1rem", lineHeight: "1.6", margin: "0 0 32px 0" }}>
+              Look up corporate files by name or unique Identification Numbers (<strong>CIN</strong>). View structural profiles, industries, descriptions, and current leadership matrices.
             </p>
           </div>
           <button 
             onClick={() => navigate("/company")}
             style={{
-              background: "#2563eb",
+              background: "#0284c7",
               color: "#ffffff",
               border: "none",
-              padding: "12px 24px",
-              borderRadius: "8px",
-              fontSize: "1rem",
+              padding: "14px 28px",
+              borderRadius: "10px",
+              fontSize: "0.95rem",
               fontWeight: "600",
               cursor: "pointer",
               textAlign: "center",
-              boxShadow: "0 4px 6px -1px rgba(37,99,235,0.2)"
+              boxShadow: "0 4px 12px rgba(2, 132, 199, 0.2)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "8px",
+              transition: "background 0.2s ease"
             }}
+            onMouseOver={(e) => e.currentTarget.style.background = "#0369a1"}
+            onMouseOut={(e) => e.currentTarget.style.background = "#0284c7"}
           >
-            Open Company Registry &rarr;
+            Open Company Registry <span>&rarr;</span>
           </button>
         </div>
 
         {/* Director Card Component Option */}
         <div style={{
           background: "#ffffff",
-          borderRadius: "16px",
-          padding: "32px",
-          boxShadow: "0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.05)",
-          border: "1px solid #e2e8f0",
+          borderRadius: "20px",
+          padding: "40px",
+          boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02)",
+          border: "1px solid rgba(226, 232, 240, 0.8)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          transition: "transform 0.2s ease"
+          transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
         }}>
           <div>
-            <div style={{ fontSize: "3rem", marginBottom: "16px" }}>👤</div>
-            <h2 style={{ color: "#0f172a", margin: "0 0 12px 0", fontSize: "1.5rem", fontWeight: "700" }}>
+            <div style={{ 
+              background: "#faf5ff", 
+              width: "60px", 
+              height: "60px", 
+              borderRadius: "14px", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center",
+              fontSize: "1.75rem", 
+              marginBottom: "24px" 
+            }}>
+              👤
+            </div>
+            <h2 style={{ color: "#0f172a", margin: "0 0 12px 0", fontSize: "1.5rem", fontWeight: "700", letterSpacing: "-0.01em" }}>
               Director Profiles Search
             </h2>
-            <p style={{ color: "#475569", fontSize: "1.05rem", lineHeight: "1.5", margin: "0 0 24px 0" }}>
-              Search profiles by Director Identification Numbers (**DIN**) or plain-text names. Inspect official contact records and active corporate career histories.
+            <p style={{ color: "#64748b", fontSize: "1rem", lineHeight: "1.6", margin: "0 0 32px 0" }}>
+              Search profiles by Director Identification Numbers (<strong>DIN</strong>) or plain-text names. Inspect official contact records and active corporate career histories.
             </p>
           </div>
           <button 
             onClick={() => navigate("/director/search")}
             style={{
-              background: "#4c1d95",
+              background: "#6b21a8",
               color: "#ffffff",
               border: "none",
-              padding: "12px 24px",
-              borderRadius: "8px",
-              fontSize: "1rem",
+              padding: "14px 28px",
+              borderRadius: "10px",
+              fontSize: "0.95rem",
               fontWeight: "600",
               cursor: "pointer",
               textAlign: "center",
-              boxShadow: "0 4px 6px -1px rgba(76,29,149,0.2)"
+              boxShadow: "0 4px 12px rgba(107, 33, 168, 0.2)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "8px",
+              transition: "background 0.2s ease"
             }}
+            onMouseOver={(e) => e.currentTarget.style.background = "#581c87"}
+            onMouseOut={(e) => e.currentTarget.style.background = "#6b21a8"}
           >
-            Open Director Search &rarr;
+            Open Director Search <span>&rarr;</span>
           </button>
         </div>
 

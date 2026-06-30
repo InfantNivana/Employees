@@ -155,13 +155,17 @@ function CompanyDetails() {
         });
       });
 
-      if (companyFound || companyData.activeEmployees.length > 0) {
-        if (!companyData.name) companyData.name = text;
-        setSelectedCompany(companyData);
-      } else {
-        setError("No company matching that name or CIN was found.");
-        setSelectedCompany(null);
-      }
+     // Change this line:
+// if (companyFound || companyData.activeEmployees.length > 0) {
+
+// To this:
+if (companyData) { 
+  if (!companyData.name) companyData.name = text;
+  setSelectedCompany(companyData);
+} else {
+  setError("No company matching that name or CIN was found.");
+  setSelectedCompany(null);
+}
     } catch (err) {
       console.error(err);
       setError("An error occurred while searching.");
@@ -263,7 +267,7 @@ function CompanyDetails() {
               </p>
               <p style={{ margin: 0 }}><strong>CIN:</strong> <span style={{ color: "#4b5563" }}>{selectedCompany.cin}</span></p>
               <p style={{ margin: 0 }}><strong>Register No:</strong> <span style={{ color: "#4b5563" }}>{selectedCompany.registerNo}</span></p>
-              <p style={{ margin: 0 }}><strong>Category:</strong> <span style={{ color: "#4b5563" }}>{selectedCompany.category}</span></p>
+              <p style={{ margin: 0 }}><strong>Industry:</strong> <span style={{ color: "#4b5563" }}>{selectedCompany.category}</span></p>
             </div>
           </div>
 
